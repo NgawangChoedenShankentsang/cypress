@@ -1,0 +1,33 @@
+version: "3.9"
+
+services:
+  mariadb:
+    image: mariadb:10.4.27
+    environment:
+      MARIADB_DATABASE: shop
+      MARIADB_ROOT_PASSWORD: root
+    ports:
+      - 3306:3306
+    volumes:
+      - ./mariadb/dump.sql:/docker-entrypoint-initdb.d/dump.sql
+      - mariadb:/var/lib/mysql
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    depends_on:
+      - mariadb
+    ports:
+      - 8080:80
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      PMA_ARBITRARY: 1
+  
+  webapp:
+    build: ./webapp
+    volumes:
+      - ./webapp/:/var/www/html/
+    ports:
+      - 80:80
+
+volumes:
+  mariadb:

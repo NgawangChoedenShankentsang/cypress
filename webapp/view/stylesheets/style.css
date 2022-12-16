@@ -1,0 +1,118 @@
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+nav {
+	padding: 1em;
+	background-color: rgba(0, 0, 0, 0.05);
+	border-radius: 1em;
+	position: fixed;
+	left: 1em;
+	right: 1em;
+	top: 1em;
+}
+
+nav a {
+	text-decoration: none;
+	color: #000000;
+	border-radius: 1em;
+	padding: 0.5em;
+}
+
+nav a:hover {
+	background-color: rgba(0, 0, 0, 0.05);
+}
+
+.content-container {
+	text-align: center;
+	margin-top: 6em;
+}
+
+.content-container .content, .overlay-container .overlay {
+	text-align: left;
+	background-color: rgba(0, 0, 0, 0.05);
+	border-radius: 1em;
+	padding: 1em;
+	display: inline-block;
+	width: 100%;
+	max-width: 60em;
+}
+
+.overlay-container {
+	background-color: rgba(0, 0, 0, 0.3);
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	text-align: center;
+	display: none;
+}
+
+.overlay-container .overlay {
+	background-color: #FFFFFF;
+	margin-top: 6em;
+}
+
+.overlay-container.visible {
+	display: initial;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+	border-spacing: 0;
+	background-color: #FFFFFF;
+}
+
+table td, table th {
+	padding: 0.5em;
+	text-align: left;
+	border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+button, a.button {
+	padding: 0.5em;
+	border-radius: 1em;
+	background-color: rgba(0, 0, 0, 0.1);
+	border: none;
+	color: #000000;
+	cursor: default;
+	font-size: 1em;
+	text-decoration: none;
+	font-family: inherit;
+}
+
+button:active, a.button:active {
+	background-color: rgba(0, 0, 0, 0.2);
+}
+
+button.destructive {
+	background-color: #DE2323;
+	color: #FFFFFF;
+}
+
+button.destructive:active {
+	background-color: #A71A1A;
+}
+
+input:not([type="checkbox"]), textarea {
+	border: 1px solid rgba(0, 0, 0, 0.05);
+	padding: 0.5em;
+	border-radius: 1em;
+	background-color: #FFFFFF;
+}
+
+.field {
+	margin-top: 1em;
+}
+
+.field * {
+	vertical-align: middle;
+}
+
+.field label {
+	width: 7em;
+	display: inline-block;
+}
