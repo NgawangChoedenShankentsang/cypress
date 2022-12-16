@@ -1,4 +1,5 @@
 /// <reference types="Cypress" />
+//testing branch commit
 
 const createRandomString = function () {
   return self?.crypto?.randomUUID() ?? Math.random() * 100000;
@@ -29,6 +30,7 @@ describe('shop app if signed sign', () => {
   it('shows the title', () => {
     cy.visit('http://localhost')
     cy.get('body').should('contain.text', 'Welcome to Productive!')
+    cy.get()
   })
   
   it('lists the products', () => {
