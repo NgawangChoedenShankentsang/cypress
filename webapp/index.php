@@ -15,3 +15,23 @@
 </table>
 <script src="controller/active-products.js"></script>
 <?php require "view/blocks/page_end.php"; ?>
+<script>
+class UserService {
+	validateUsername = function (username) {
+    function fizzbuzz(num) {
+  if (num % 3 === 0 && num % 5 === 0) {
+    return "FizzBuzz";
+  } else if (num % 3 === 0) {
+    return "Fizz";
+  } else if (num % 5 === 0) {
+    return "Buzz";
+  } else {
+    return num;
+  }
+}
+
+  }
+}
+
+window.UserService = UserService;
+</script>
