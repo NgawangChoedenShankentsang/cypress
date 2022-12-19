@@ -13,7 +13,7 @@ describe("fizzbuzz function", () => {
       })
     })
   
-    it('returns fizz if the number is divisible by 5', () => {
+    it('returns buzz if the number is divisible by 5', () => {
       cy.window().then((window) => {
         const result = window.fizzbuzz(5)
   
@@ -21,11 +21,11 @@ describe("fizzbuzz function", () => {
       })
     })
 
-    it('returns fizz if the number is divisible by 15', () => {
+    it('returns fizzbuzz if the number is divisible by 15', () => {
         cy.window().then((window) => {
           const result = window.fizzbuzz(15)
     
-          assert.equal(result, 'fizzBuzz')
+          assert.equal(result, 'FizzBuzz')
         })
       })
 
